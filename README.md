@@ -8,7 +8,11 @@ The Azure for Students subscription's allowed deployment regions do not overlap 
 
 ## Demo video
 
-Pending the final frontend platform decision. The video will show the real deployed browser application, backend environment-setting names with secret values hidden, GitHub Actions environment variables, an order, and RabbitMQ queue activity. Maximum length: five minutes.
+[Working backup browser recording](./CST8915_Lab3_Backup_Live_Browser_Demo.mp4) (58 seconds).
+
+This recording uses live Chrome DevTools screencast frames and their original timestamps. It shows the App Service backup, backend URLs, masked backend setting names, the workflow variables, a successful browser order, and RabbitMQ queue activity. The ChatGPT side panel is excluded, and Azure account identifiers are masked.
+
+The final YouTube demonstration is pending the frontend platform decision. This backup recording explicitly identifies the Static Web Apps requirement as pending; it does not claim that the backup meets that exact platform requirement. Maximum final video length: five minutes.
 
 ## Deployed endpoints
 
