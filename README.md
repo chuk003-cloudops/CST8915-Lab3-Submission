@@ -2,7 +2,7 @@
 
 ## Deployment status
 
-The Python product service and Node.js order service are deployed on Azure App Service. RabbitMQ runs on a dedicated Azure VM. Live API testing returned `200 Order received`, and the broker queue increased from 4 to 5 messages. A subsequent order placed through the deployed Vue storefront succeeded and increased the queue to 6 messages.
+At recording time, the Python product service and Node.js order service ran on Azure App Service, and RabbitMQ ran on a dedicated Azure VM. Live API testing returned `200 Order received`, and the broker queue increased from 4 to 5 messages. A subsequent browser order increased it to 6, and the recorded management clip shows an additional order increasing it from 8 to 9 messages.
 
 The Azure for Students subscription's allowed deployment regions do not overlap the five regions supported by Azure Static Web Apps. The submitted implementation stays within the student offer and uses the same Vue production build on the existing Free App Service plan. This is an explicit platform deviation from the instructions. Instructor acceptance of this exception remains a marking decision; this submission does not claim that an Azure Static Web App was created.
 
@@ -52,4 +52,4 @@ Environment variables let the same source code run locally and in Azure with dif
 - RabbitMQ's management interface is viewed through an SSH tunnel. The demo does not require a public management-port rule.
 - No credential values are included in these repositories.
 
-The platform exception is documented for the instructor. The recording preserves live deployment evidence before the requested post-submission Azure cleanup; endpoint URLs may become unavailable after cleanup.
+The platform exception is documented for the instructor. After Brightspace confirmed the submission on October 4, 2026, the requested Azure cleanup removed 34 deployed resources across six resource groups in the student-owned subscription. A final Azure inventory returned zero deployed resources and zero resource groups. The endpoint URLs above are now archival; the YouTube demo, recording file, source repositories, and reflections preserve the evidence.
