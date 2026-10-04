@@ -4,22 +4,24 @@
 
 The Python product service and Node.js order service are deployed on Azure App Service. RabbitMQ runs on a dedicated Azure VM. Live API testing returned `200 Order received`, and the broker queue increased from 4 to 5 messages. A subsequent order placed through the deployed Vue storefront succeeded and increased the queue to 6 messages.
 
-The Azure for Students subscription's allowed deployment regions do not overlap the five regions supported by Azure Static Web Apps. A working App Service storefront backup uses the same Vue production build. This backup is an explicit platform deviation from the lab instructions. Exact compliance still requires deploying the frontend to Azure Static Web Apps using a supported subscription, or an instructor-approved exception.
+The Azure for Students subscription's allowed deployment regions do not overlap the five regions supported by Azure Static Web Apps. The submitted implementation stays within the student offer and uses the same Vue production build on the existing Free App Service plan. This is an explicit platform deviation from the instructions. Instructor acceptance of this exception remains a marking decision; this submission does not claim that an Azure Static Web App was created.
 
 ## Demo video
 
-[Working backup browser recording](./CST8915_Lab3_Backup_Live_Browser_Demo.mp4) (58 seconds).
+[YouTube demo](https://youtu.be/WLlNLRw5ZQ0) (58 seconds, unlisted).
+
+[Repository copy of the live browser recording](./CST8915_Lab3_Backup_Live_Browser_Demo.mp4).
 
 This recording uses live Chrome DevTools screencast frames and their original timestamps. It shows the App Service backup, backend URLs, masked backend setting names, the workflow variables, a successful browser order, and RabbitMQ queue activity. The ChatGPT side panel is excluded, and Azure account identifiers are masked.
 
-The final YouTube demonstration is pending the frontend platform decision. This backup recording explicitly identifies the Static Web Apps requirement as pending; it does not claim that the backup meets that exact platform requirement. Maximum final video length: five minutes.
+The recording explicitly identifies the App Service alternative and the Static Web Apps restriction. It is under the five-minute limit and does not claim to meet the exact Static Web Apps platform requirement.
 
 ## Deployed endpoints
 
 - Product API: https://chuk8915product.azurewebsites.net/products
 - Order API: https://chuk8915order.azurewebsites.net/orders
 - Vue storefront backup: https://chuk8915storefront.azurewebsites.net/
-- Azure Static Web Apps URL: pending supported subscription deployment.
+- Azure Static Web Apps URL: unavailable under the student offer's enforced region policy; the frontend URL above is the App Service alternative.
 
 ## Service repositories from Lab 2
 
@@ -50,4 +52,4 @@ Environment variables let the same source code run locally and in Azure with dif
 - RabbitMQ's management interface is viewed through an SSH tunnel. The demo does not require a public management-port rule.
 - No credential values are included in these repositories.
 
-This repository is prepared work in progress and has not yet been submitted as a complete Lab 3 deliverable.
+The platform exception is documented for the instructor. The recording preserves live deployment evidence before the requested post-submission Azure cleanup; endpoint URLs may become unavailable after cleanup.
